@@ -22,7 +22,7 @@ Aprender sobre biologia nunca foi tão emocionante! *Ultimate Virus* transforma 
 **🛠️ Tecnologia de Ponta (Nos Bastidores!):**
 
 * Desenvolvido com a poderosa **Unity**.
-* Programado na eficiente linguagem **C++**.
+* Programado na eficiente linguagem **C#**.
 * Construído para a imersão em um ambiente **2D**.
 
 **🎓 Uma Jornada Educacional Sem Igual! 🎓**
