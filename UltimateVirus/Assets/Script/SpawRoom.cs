@@ -7,11 +7,16 @@ public class SpawRoom : MonoBehaviour
 
     public int openingDirection;
     string spawName ;
+
+    private Room_Template template =  ;
+
     // Start is called before the first frame update
     void Start()
     {
         spawName = this.gameObject.name;
         
+
+
         switch (spawName)
         {
             case "spawT":
