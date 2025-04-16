@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    GameManager instance;
+    public static GameManager instance;
     TrocaCamera trocacamera;
+    public int numRoom = 10;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class GameManager : MonoBehaviour
 
     void Start()
     {
+
        
         
     }

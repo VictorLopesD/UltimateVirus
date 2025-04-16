@@ -3,10 +3,12 @@ using UnityEngine;
 public class Room_Template : MonoBehaviour
 {
     [SerializeField]
-    public GameObject[] toproom;
+    public GameObject[] topRoom;
     public GameObject[] rigthRoom;
-    public GameObject[] botoonRoom;
+    public GameObject[] bottonRoom;
     public GameObject[] leftRoom;
+    public GameObject[] closeRoom;
+  
 
 
     void Start()
