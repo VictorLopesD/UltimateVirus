@@ -343,10 +343,11 @@ MonoBehaviour:
   - {fileID: 3895232126493618608, guid: 930aa13b5b2117d48ba6b1242f816bc6, type: 3}
   - {fileID: 7177255681831120501, guid: b151698e15d4bc147a4090ecd00a563b, type: 3}
   closeRoom:
-  - {fileID: 6873787558232649146, guid: 306e3ef32ac04de4d848fb8bb24c8875, type: 3}
-  - {fileID: 4504918885285607128, guid: 8417fee2ca60f334db31ad8d728b1491, type: 3}
-  - {fileID: 8746293818830867335, guid: 37914996d26d1314e8ca806bccda1dd2, type: 3}
-  - {fileID: 154620398675751027, guid: 7ab5028601179f94f82e75ddb4a608de, type: 3}
+  - {fileID: 6873787558232649146, guid: c0d9ef8ffc5e8c84890ef2b01f1fa4e3, type: 3}
+  - {fileID: 4504918885285607128, guid: fbc931f3d9133ca45af06fb2ca3918d2, type: 3}
+  - {fileID: 8746293818830867335, guid: b7e9f36b5dd096041918672ab7e05123, type: 3}
+  - {fileID: 154620398675751027, guid: 0bb37f2f33b92474fae51ca274760245, type: 3}
+  - {fileID: 1171565464519997060, guid: abb12125bb33266479d232c7bec5de24, type: 3}
 --- !u!4 &444499360
 Transform:
   m_ObjectHideFlags: 0

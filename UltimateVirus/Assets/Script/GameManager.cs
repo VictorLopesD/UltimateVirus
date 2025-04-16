@@ -6,7 +6,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
     TrocaCamera trocacamera;
-    public int numRoom = 10;
+    public int numRoom = 3;
 
     private void Awake()
     {
