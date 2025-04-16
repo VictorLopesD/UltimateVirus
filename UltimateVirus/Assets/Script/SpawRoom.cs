@@ -1,21 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class SpawRoom : MonoBehaviour
 {
-   
     public int openingDirection;
-    string spawName ;
     private int rand;
     public bool spawned;
     private Room_Template template;
 
     private void Awake()
     {
-        spawName = this.gameObject.name;
-        switch (spawName)
+        // Define a direção de abertura com base no nome do objeto
+        switch (gameObject.name)
         {
             case "spawT":
                 openingDirection = 1;
@@ -32,124 +29,92 @@ public class SpawRoom : MonoBehaviour
             default:
                 openingDirection = 0;
                 break;
-
-
         }
-
     }
 
-   
-    
-    // Start is called before the first frame update
     void Start()
     {
         template = GameObject.FindGameObjectWithTag("Rooms").GetComponent<Room_Template>();
-        
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        Invoke("SpawRooms", 2f);
-        Invoke("CloseRoom", 2f);
-
-
+        // Aguarda um pequeno tempo pra evitar conflitos
+        Invoke("SpawRooms", 0.2f);
+        Invoke("CloseRoom", 4f);
     }
 
     public void SpawRooms()
     {
-        if (!spawned && GameManager.instance.numRoom > 0)
+        // Se já spawnou ou não tem mais salas pra gerar, sai
+        if (spawned || GameManager.instance.numRoom <= 0)
+            return;
+
+        // Evita gerar sala se já tiver algo na posição
+        Collider2D checkRoom = Physics2D.OverlapCircle(transform.position, 0.2f, LayerMask.GetMask("Room"));
+        if (checkRoom != null)
         {
-            GameManager.instance.numRoom -= 1;
-            Debug.Log("numPgerar: " + GameManager.instance.numRoom);
-            if (openingDirection == 3)
-            {
-                rand = Random.Range(1, template.topRoom.Length);
-                GameObject topRoom = Instantiate(template.topRoom[rand], transform.position, template.topRoom[rand].transform.rotation);
-               // Debug.Log(topRoom.name + " - " + gameObject.name);
-
-
-            }
-            else if (openingDirection == 4)
-            {
-                rand = Random.Range(0, template.rigthRoom.Length);
-                GameObject rightRoom = Instantiate(template.rigthRoom[rand], transform.position, template.rigthRoom[rand].transform.rotation);
-                //Debug.Log(rightRoom.name + gameObject.name);
-
-            }
-            else if (openingDirection == 1)
-            {
-                rand = Random.Range(0, template.bottonRoom.Length);
-                GameObject bottonRoom = Instantiate(template.bottonRoom[rand], transform.position, template.bottonRoom[rand].transform.rotation);
-                //Debug.Log(bottonRoom.name + gameObject.name);
-
-            }
-            else if (openingDirection == 2)
-            {
-                rand = Random.Range(0, template.leftRoom.Length);
-                GameObject leftRoom = Instantiate(template.leftRoom[rand], transform.position, template.leftRoom[rand].transform.rotation);
-                //Debug.Log(leftRoom.name + gameObject.name);
-
-            }
-            
-
-
-                spawned = true;
+            spawned = true;
+            return;
         }
-        
 
+        // Diminui o número de salas a gerar
+        GameManager.instance.numRoom -= 1;
 
-        
+        // Gera uma sala com base na direção
+        switch (openingDirection)
+        {
+            case 1: // cima
+                rand = Random.Range(0, template.bottonRoom.Length);
+                Instantiate(template.bottonRoom[rand], transform.position, Quaternion.identity);
+                break;
+            case 2: // esquerda
+                rand = Random.Range(0, template.leftRoom.Length);
+                Instantiate(template.leftRoom[rand], transform.position, Quaternion.identity);
+                break;
+            case 3: // baixo
+                rand = Random.Range(0, template.topRoom.Length);
+                Instantiate(template.topRoom[rand], transform.position, Quaternion.identity);
+                break;
+            case 4: // direita
+                rand = Random.Range(0, template.rigthRoom.Length);
+                Instantiate(template.rigthRoom[rand], transform.position, Quaternion.identity);
+                break;
+        }
+
+        spawned = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-      if(collision.CompareTag("Spawpoint") )
-      {
-            Debug.Log(this.gameObject.name.ToString() + " - " + collision.gameObject.name.ToString());
-
-            if ( collision.GetComponent<SpawRoom>().spawned == false &&  spawned == false )
+        if (collision.CompareTag("Spawpoint"))
+        {
+            if (!collision.GetComponent<SpawRoom>().spawned && !spawned)
             {
-                
-                
                 Destroy(gameObject);
             }
-            
-        }
-               
-    }
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        if (!collision.CompareTag("Room") && spawned)
-        {
-            Debug.Log( "Estou em uma sala");
-            Instantiate(template.closeRoom[4], transform.position, template.closeRoom[4].transform.rotation);
+
             spawned = true;
         }
     }
+
     public void CloseRoom()
     {
-        if (!spawned && GameManager.instance.numRoom <= 0)
+        if (spawned || GameManager.instance.numRoom > 0)
+            return;
+
+        switch (openingDirection)
         {
-            if (openingDirection == 1)
-            {
-                GameObject CloseRoom = Instantiate(template.closeRoom[0], transform.position, template.closeRoom[0].transform.rotation);
-            }
-            else if (openingDirection == 2)
-            {
-                GameObject CloseRoom = Instantiate(template.closeRoom[1], transform.position, template.closeRoom[1].transform.rotation);
-            }
-            else if (openingDirection == 3)
-            {
-                GameObject CloseRoom = Instantiate(template.closeRoom[2], transform.position, template.closeRoom[2].transform.rotation);
-            }
-            else if (openingDirection == 4)
-            {
-                GameObject CloseRoom = Instantiate(template.closeRoom[3], transform.position, template.closeRoom[3].transform.rotation);
-            }
-            spawned = true;
+            case 1:
+                Instantiate(template.closeRoom[0], transform.position, Quaternion.identity);
+                break;
+            case 2:
+                Instantiate(template.closeRoom[1], transform.position, Quaternion.identity);
+                break;
+            case 3:
+                Instantiate(template.closeRoom[2], transform.position, Quaternion.identity);
+                break;
+            case 4:
+                Instantiate(template.closeRoom[3], transform.position, Quaternion.identity);
+                break;
         }
+
+        spawned = true;
     }
-        
 }

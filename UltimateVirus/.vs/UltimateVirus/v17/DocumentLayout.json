@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\spawroom.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|c:\\users\\38581182810\\documents\\github\\ultimatevirus\\ultimatevirus\\assets\\script\\destroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\destroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|C:\\Users\\38581182810\\Documents\\GitHub\\UltimateVirus\\UltimateVirus\\assets\\script\\room_template.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\room_template.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|C:\\Users\\38581182810\\Documents\\GitHub\\UltimateVirus\\UltimateVirus\\assets\\script\\destroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|solutionrelative:assets\\script\\destroyer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{4A0F4249-4AA7-B574-8BE5-57BEE0062ED2}|Assembly-CSharp.csproj|C:\\Users\\38581182810\\Documents\\GitHub\\UltimateVirus\\UltimateVirus\\assets\\script\\trocacamera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -54,7 +54,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Destroyer.cs",
               "DocumentMoniker": "C:\\Users\\38581182810\\Documents\\GitHub\\UltimateVirus\\UltimateVirus\\Assets\\Script\\Destroyer.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Destroyer.cs",
@@ -67,7 +67,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Room_Template.cs",
               "DocumentMoniker": "C:\\Users\\38581182810\\Documents\\GitHub\\UltimateVirus\\UltimateVirus\\Assets\\Script\\Room_Template.cs",
               "RelativeDocumentMoniker": "Assets\\Script\\Room_Template.cs",
@@ -86,7 +86,7 @@
               "RelativeDocumentMoniker": "Assets\\Script\\SpawRoom.cs",
               "ToolTip": "C:\\Users\\38581182810\\Documents\\GitHub\\UltimateVirus\\UltimateVirus\\Assets\\Script\\SpawRoom.cs",
               "RelativeToolTip": "Assets\\Script\\SpawRoom.cs",
-              "ViewState": "AgIAAG0AAAAAAAAAAAAmwH0AAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAQwHgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-14T22:51:15.633Z",
               "EditorCaption": ""
@@ -149,8 +149,7 @@
               "RelativeToolTip": "Assets\\Script\\TrocaCamera.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAQwBgAAABxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-14T22:51:15.745Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-04-14T22:51:15.745Z"
             },
             {
               "$type": "Document",

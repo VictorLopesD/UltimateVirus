@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3808660251206889397}
   - component: {fileID: 4107297140620929805}
   - component: {fileID: 82704672187514720}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ GameObject:
   - component: {fileID: 8452005649226401005}
   - component: {fileID: 4075630390811652555}
   - component: {fileID: 1805126262181588069}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -277,7 +277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2975547666007971582}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -315,7 +315,7 @@ GameObject:
   - component: {fileID: 7986918783044585770}
   - component: {fileID: 9097131830754270497}
   - component: {fileID: 6369019119028372187}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -449,7 +449,7 @@ GameObject:
   - component: {fileID: 5882682969615496221}
   - component: {fileID: 2948770651999053370}
   - component: {fileID: 1392630288950510702}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: CloseRoomD
   m_TagString: Room
   m_Icon: {fileID: 0}
@@ -516,7 +516,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 10, y: 10}
   m_EdgeRadius: 0
 --- !u!50 &1392630288950510702
 Rigidbody2D:
@@ -556,7 +556,7 @@ GameObject:
   - component: {fileID: 3192764931832473794}
   - component: {fileID: 1102790778751777788}
   - component: {fileID: 1067444637510061790}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -690,7 +690,7 @@ GameObject:
   - component: {fileID: 4655311880886866358}
   - component: {fileID: 1777909372390308631}
   - component: {fileID: 2256037857294293828}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
