@@ -2,8 +2,19 @@ using UnityEngine;
 
 public class Destroyer : MonoBehaviour
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    public Collider2D checkRoom;
+
+
+    private void Update()
     {
-        Destroy(collision.gameObject);
+        checkRoom = Physics2D.OverlapCircle(transform.position, 0.2f, LayerMask.GetMask("SpawPoint"));
+        
+            if (checkRoom != null && checkRoom.gameObject == checkRoom.CompareTag("Spawpoint"))
+        {
+            Debug.LogWarning("Objeto: " + checkRoom.gameObject.name + " destruido");
+            Destroy(checkRoom.gameObject);
+            checkRoom = null;
+        }
     }
+       
 }

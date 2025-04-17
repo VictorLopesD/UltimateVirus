@@ -233,6 +233,14 @@ PrefabInstance:
       value: RoomTLRD
       objectReference: {fileID: 0}
     - target: {fileID: 5285373122530445645, guid: 930aa13b5b2117d48ba6b1242f816bc6, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285373122530445645, guid: 930aa13b5b2117d48ba6b1242f816bc6, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5285373122530445645, guid: 930aa13b5b2117d48ba6b1242f816bc6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -272,6 +280,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7638021887064538782, guid: 930aa13b5b2117d48ba6b1242f816bc6, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -307,7 +319,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   topRoom:
-  - {fileID: 8746293818830867335, guid: 37914996d26d1314e8ca806bccda1dd2, type: 3}
   - {fileID: 5065107608970255826, guid: ba32306f39a37c0439b6d1c5b865203e, type: 3}
   - {fileID: 6424070908352593687, guid: bfbb7f725845db445aa3fe29477ae075, type: 3}
   - {fileID: 4398625687237398423, guid: 9f333ba373fc7784e96004260a43d8ae, type: 3}
@@ -317,7 +328,6 @@ MonoBehaviour:
   - {fileID: 2284434921109053680, guid: c3d9be1474f6f0a4a9b17755478da86c, type: 3}
   rigthRoom:
   - {fileID: 7177255681831120501, guid: b151698e15d4bc147a4090ecd00a563b, type: 3}
-  - {fileID: 154620398675751027, guid: 7ab5028601179f94f82e75ddb4a608de, type: 3}
   - {fileID: 8676025427285056466, guid: e510941d8f6a08244a4707a3b6ec46c3, type: 3}
   - {fileID: 4398625687237398423, guid: 9f333ba373fc7784e96004260a43d8ae, type: 3}
   - {fileID: 159947151168968299, guid: 7b9142b8967646b43adc63b71e36e828, type: 3}
@@ -325,7 +335,6 @@ MonoBehaviour:
   - {fileID: 852540470575273278, guid: a0656f9c6898fb74f97c151a2dba6b97, type: 3}
   - {fileID: 3895232126493618608, guid: 930aa13b5b2117d48ba6b1242f816bc6, type: 3}
   bottonRoom:
-  - {fileID: 6873787558232649146, guid: 306e3ef32ac04de4d848fb8bb24c8875, type: 3}
   - {fileID: 3788556414114670636, guid: cf4d228ad5255984e9539d168de8d900, type: 3}
   - {fileID: 852540470575273278, guid: a0656f9c6898fb74f97c151a2dba6b97, type: 3}
   - {fileID: 159947151168968299, guid: 7b9142b8967646b43adc63b71e36e828, type: 3}
@@ -334,7 +343,6 @@ MonoBehaviour:
   - {fileID: 2284434921109053680, guid: c3d9be1474f6f0a4a9b17755478da86c, type: 3}
   - {fileID: 9141102188265273754, guid: 2da43eac96bd199448ede3f24bdb1715, type: 3}
   leftRoom:
-  - {fileID: 4504918885285607128, guid: 8417fee2ca60f334db31ad8d728b1491, type: 3}
   - {fileID: 3788556414114670636, guid: cf4d228ad5255984e9539d168de8d900, type: 3}
   - {fileID: 852540470575273278, guid: a0656f9c6898fb74f97c151a2dba6b97, type: 3}
   - {fileID: 5065107608970255826, guid: ba32306f39a37c0439b6d1c5b865203e, type: 3}
@@ -424,7 +432,7 @@ Camera:
   far clip plane: 1000.09
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1088,7 +1096,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9b8e73f08c6ee54db874f63770d2788, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  numRoom: 10
+  numRoom: 5
 --- !u!4 &1185660869
 Transform:
   m_ObjectHideFlags: 0
@@ -1756,11 +1764,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2555213780452744730, guid: fd98976126fb9e046b0f0c75dd89097d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2555213780452744730, guid: fd98976126fb9e046b0f0c75dd89097d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2555213780452744730, guid: fd98976126fb9e046b0f0c75dd89097d, type: 3}
       propertyPath: m_LocalPosition.x
