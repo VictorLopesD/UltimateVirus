@@ -139,7 +139,7 @@ public class SpawRoom : MonoBehaviour
         }
         else if(checkRoom == null && room == null)
             {
-                Debug.LogWarning(this.gameObject + " gerando sala faltante");
+                //Debug.LogWarning(this.gameObject + " gerando sala faltante");
                 switch (openingDirection)
                 {
                     case 1:

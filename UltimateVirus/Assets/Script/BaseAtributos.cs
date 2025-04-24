@@ -4,7 +4,7 @@ public class BaseAtributos : MonoBehaviour
 {
     public GameObject[] tipoMonstro;
     public GameObject[] spawPointMonstro;
-    int classifMonst;
+    int classifMonst = 0;
     public int hpMax;
     public int dano;
     public float speed;
@@ -13,9 +13,9 @@ public class BaseAtributos : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        GerarAtributos();
 
-        GerarAtributos(tipoMonstro, 0,4);
-
+       
 
     }
 
@@ -25,14 +25,22 @@ public class BaseAtributos : MonoBehaviour
         
     }
 
-    public void GerarAtributos(GameObject[] vetTipoMonstro, int valorMin, int valorMax)
+    public void GerarAtributos()
     {
-        int valor  = Random.Range(valorMin, valorMax);
+        int valor;
+        valor = Random.Range(0, spawPointMonstro.Length - 1);
         int pontSpaw = 0;
-        nivel = 1 * nivel;
-        classifMonst = Random.Range(valorMin, this.tipoMonstro.Length);
-        if (pontSpaw <= spawPointMonstro.Length)
+        nivel = 1 * Random.Range(1, 3);
+        
+        
+
+
+        while (valor < spawPointMonstro.Length-1)
         {
+            classifMonst = Random.Range(0, this.tipoMonstro.Length);
+
+            GameObject inimigo1 = null;
+            Debug.Log("class " + classifMonst );
             switch (classifMonst)
             {
                 case 0:
@@ -40,7 +48,7 @@ public class BaseAtributos : MonoBehaviour
                     hpMax = 100*nivel;
                     dano = 100*nivel;
                     speed = 100 * nivel;
-                    Instantiate(tipoMonstro[classifMonst], spawPointMonstro[pontSpaw].transform.position, Quaternion.Euler(0, 0, 0));
+                    inimigo1 = Instantiate(tipoMonstro[classifMonst], new Vector3 (spawPointMonstro[pontSpaw].transform.position.x, spawPointMonstro[pontSpaw].transform.position.y, -0.5f) , Quaternion.Euler(0, 0, 0));
                     pontSpaw++;
                     break;
                 case 1:
@@ -48,14 +56,15 @@ public class BaseAtributos : MonoBehaviour
                     hpMax = 200*nivel;
                     dano = 200 * nivel;
                     speed = 200 * nivel;
-                    Instantiate(tipoMonstro[classifMonst], spawPointMonstro[pontSpaw].transform.position, Quaternion.Euler(0, 0, 0));
+                    inimigo1 = Instantiate(tipoMonstro[classifMonst], new Vector3(spawPointMonstro[pontSpaw].transform.position.x, spawPointMonstro[pontSpaw].transform.position.y, -0.5f), Quaternion.Euler(0, 0, 0));
                     pontSpaw++;
                     break;
                 default:
                     Debug.LogError("não foi possivel criar inimigo");
                     break;
             }
-
+            valor++;
+            Debug.Log(this.name + " - monstro " + inimigo1.name + " qnt de spaw: " + valor);
         }
 
     }

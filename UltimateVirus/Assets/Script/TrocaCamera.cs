@@ -39,6 +39,7 @@ public class TrocaCamera : MonoBehaviour
         batalhaAtivada = false;
 
     }
-
    
+
+
 }

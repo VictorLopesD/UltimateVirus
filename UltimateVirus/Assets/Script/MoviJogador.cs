@@ -37,7 +37,7 @@ public class MoviJogador : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        Debug.Log(collision.name);
+        //Debug.Log(collision.name);
         if (collision.CompareTag("Room"))
         {
             trocaCamera.mapaAtivo = collision.gameObject.transform;

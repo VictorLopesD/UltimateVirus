@@ -11,7 +11,7 @@ public class Destroyer : MonoBehaviour
         
             if (checkRoom != null && checkRoom.gameObject == checkRoom.CompareTag("Spawpoint"))
         {
-            Debug.LogWarning("Objeto: " + checkRoom.gameObject.name + " destruido");
+           // Debug.LogWarning("Objeto: " + checkRoom.gameObject.name + " destruido");
             Destroy(checkRoom.gameObject);
             checkRoom = null;
         }
