@@ -10,7 +10,7 @@ public class TrocaCamera : MonoBehaviour
     [SerializeField]
     public bool batalhaAtivada;
     [SerializeField]
-    Transform Jogador;
+    public Transform mapaAtivo;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +21,8 @@ public class TrocaCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        camRPG.transform.LookAt(Jogador.position);
-       camRPG.transform.position = new Vector3 (Jogador.transform.position.x,Jogador.transform.position.y, camRPG.transform.position.z);
+        camRPG.transform.LookAt(mapaAtivo.position);
+       camRPG.transform.position = new Vector3 (mapaAtivo.transform.position.x, mapaAtivo.transform.position.y, camRPG.transform.position.z);
     }
 
     public void BatalhaAtiva()
@@ -39,4 +39,6 @@ public class TrocaCamera : MonoBehaviour
         batalhaAtivada = false;
 
     }
+
+   
 }

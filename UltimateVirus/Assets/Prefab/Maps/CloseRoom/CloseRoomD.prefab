@@ -449,6 +449,7 @@ GameObject:
   - component: {fileID: 5882682969615496221}
   - component: {fileID: 2948770651999053370}
   - component: {fileID: 1392630288950510702}
+  - component: {fileID: 8627185404480944764}
   m_Layer: 3
   m_Name: CloseRoomD
   m_TagString: Room
@@ -545,6 +546,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8627185404480944764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6873787558232649146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733debc602803574f8daf57085f035d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagemMapa:
+  - {fileID: 2202545589760419496, guid: 912cab33e0adbf3418faee553556308e, type: 3}
 --- !u!1 &8065859362239184979
 GameObject:
   m_ObjectHideFlags: 0

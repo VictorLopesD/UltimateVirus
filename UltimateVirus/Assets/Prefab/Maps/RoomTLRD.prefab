@@ -523,6 +523,7 @@ GameObject:
   - component: {fileID: 5285373122530445645}
   - component: {fileID: -1073677562989888025}
   - component: {fileID: -2403156741382725242}
+  - component: {fileID: 8697373390734273473}
   m_Layer: 3
   m_Name: RoomTLRD
   m_TagString: Room
@@ -592,7 +593,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 10, y: 10}
+  m_Size: {x: 9, y: 9}
   m_EdgeRadius: 0
 --- !u!50 &-2403156741382725242
 Rigidbody2D:
@@ -621,6 +622,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8697373390734273473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3895232126493618608}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733debc602803574f8daf57085f035d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagemMapa:
+  - {fileID: 2202545589760419496, guid: 912cab33e0adbf3418faee553556308e, type: 3}
+  valormapa: 0
 --- !u!1 &4091281017988034906
 GameObject:
   m_ObjectHideFlags: 0
@@ -1330,7 +1346,7 @@ GameObject:
   - component: {fileID: 5009366086618489662}
   m_Layer: 6
   m_Name: SpawPoint
-  m_TagString: Respawn
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

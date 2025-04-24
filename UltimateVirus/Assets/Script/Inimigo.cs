@@ -7,20 +7,24 @@ public class Inimigo : MonoBehaviour
     public float hpMax;
     public float speed;
     public int nivel;
+    public int dano;
 
     BaseAtributos atributos;
 
     private void Awake()
     {
-        atributos = FindAnyObjectByType<BaseAtributos>();
-        atributos.GerarAtributos(4, 10);
-        hpAtual = atributos.hpMax;
+        
     }
     void Start()
     {
-        
-        
-        
+
+        atributos = FindAnyObjectByType<BaseAtributos>();
+        //atributos.GerarAtributos(4, 10);
+        hpAtual = atributos.hpMax;
+        speed = atributos.speed;
+        nivel = atributos.nivel;
+        dano = atributos.dano;
+
     }
 
     // Update is called once per frame
