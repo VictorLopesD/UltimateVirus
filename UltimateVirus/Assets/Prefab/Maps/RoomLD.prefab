@@ -669,6 +669,7 @@ GameObject:
   - component: {fileID: 2429550484251400836}
   - component: {fileID: 3948457337696058237}
   - component: {fileID: 7429296698165101858}
+  - component: {fileID: 5917359207720377328}
   m_Layer: 3
   m_Name: RoomLD
   m_TagString: Room
@@ -767,6 +768,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &5917359207720377328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3788556414114670636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 733debc602803574f8daf57085f035d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  imagemMapa:
+  - {fileID: 1939912786885191424, guid: e8786b35426b8bd4b8e047583a7e748c, type: 3}
+  - {fileID: 520388589039990407, guid: 865cb15dbb4e8734da6412d6f6b5f0f5, type: 3}
+  valormapa: 0
 --- !u!1 &4472442051465896358
 GameObject:
   m_ObjectHideFlags: 0
